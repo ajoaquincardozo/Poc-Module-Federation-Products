@@ -1,10 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+require('dotenv').config({ path: './.env' })
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: process.env.PUBLIC_PATH || "/" //"http://localhost:3000/",
   },
 
   resolve: {
