@@ -5,7 +5,8 @@ require('dotenv').config({ path: './.env' })
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: process.env.PUBLIC_PATH || "/" //"http://localhost:3000/",
+    //https://stackoverflow.com/questions/69632866/uncaught-chunkloaderror-loading-chunk-module-federation-webpack-5-while-loadi
+    publicPath: "auto" //process.env.PUBLIC_PATH || "/" //"http://localhost:3000/",
   },
 
   resolve: {
