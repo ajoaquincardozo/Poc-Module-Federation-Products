@@ -43,7 +43,7 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "home",
+      name: "mfeProducts",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
