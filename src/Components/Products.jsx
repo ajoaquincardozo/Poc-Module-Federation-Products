@@ -6,8 +6,7 @@ export default function Products({ onDetailClick }) {
   const [products, setProducts] = useState([]);
 
   useEffect(async () => {
-    const result = await getProducts();
-    setProducts(result.products);
+    getProducts().then(setProducts);
   }, []);
 
   return (
