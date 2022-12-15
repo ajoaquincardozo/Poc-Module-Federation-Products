@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import { currency } from "../products";
 
-export default function ProductItem(props) {
-  const product = props.product;
-    const buttonAddProductRef = useRef();
+export default function ProductItem({product, onDetailClick }) {
+  const buttonAddProductRef = useRef();
 
   const addProduct = (product) => {
     const detail = {
@@ -24,6 +23,7 @@ export default function ProductItem(props) {
         className="w-full h-48"
         src={product.thumbnail}
         alt={product.title}
+        onClick={onDetailClick}
         />
         <div className="px-6 py-4 h-52">
         <div className="flex justify-between items-center">
